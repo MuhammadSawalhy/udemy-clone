@@ -1,0 +1,157 @@
+nav {
+  padding: 0 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 100;
+}
+
+nav .nav__logo {
+  width: 91px;
+}
+
+nav .nav__logo_container {
+  display: grid;
+  place-items: center;
+}
+
+nav .nav__logo_link {
+  line-height: 0; /* to make the link fit the image inside it */
+}
+
+nav .nav__btn {
+  border: none;
+  background-color: transparent;
+  padding: 0 1.2rem;
+  height: 4.8rem;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+nav .nav__btn--placeholder {
+  visibility: hidden;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+nav .nav__links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav .nav__link {
+  margin: 1.2rem 0;
+  padding: 0 1.2rem;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1.4rem;
+
+  height: 4.8rem;
+  display: inline-flex;
+  align-items: center;
+
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+nav .nav__link:visited {
+  color: inherit;
+}
+
+nav .nav__link:hover {
+  /* 
+  * this filter is equivalent to `background-color: #401b9c`
+  * we need to do this to apply also to the <img> tags that source svg icons
+  * tool used: https://codepen.io/sosuke/pen/Pjoqqp?editors=0110
+  * */
+  filter: brightness(0) saturate(100%) invert(15%) sepia(65%) saturate(4496%) hue-rotate(255deg)
+    brightness(74%) contrast(103%);
+}
+
+nav .nav__search {
+  flex-grow: 1;
+  border-radius: 100px;
+  padding: 0 2.4rem 0 0;
+  display: flex;
+  align-items: center;
+  height: 4.8rem;
+  border: 1px solid #1c1d1f;
+  background-color: #f7f9fa;
+  overflow: hidden;
+}
+
+nav .nav__search input {
+  border: none;
+  background-color: transparent;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+nav .nav__search input:focus {
+  outline: none;
+}
+
+nav .nav__search button {
+  padding: 0;
+  height: 100%;
+  width: 4.8rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+nav .nav__search button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+nav > .sm-only {
+  visibility: hidden;
+  position: absolute;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    padding: 0.4rem;
+  }
+
+  nav > *:not(.sm) {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  nav > .sm-only {
+    visibility: visible;
+    position: static;
+  }
+
+  nav .nav__logo {
+    width: 75px;
+  }
+
+  nav .nav__logo_container {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  nav .nav__link--business {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  nav .nav__link--teach {
+    display: none;
+  }
+}

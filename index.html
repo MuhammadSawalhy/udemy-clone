@@ -5,32 +5,58 @@
     <meta name="viewport" content="width=device-width" />
     <title>Udemy clone - bld.ai intern project 1</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <nav>
-      <img class="nav__logo" src="./assets/logo-udemy.svg" />
-      <a class="nav__link nav__link--categories" href="#" />
-      <form class="nav__search">
-        <button></button>
-        <input type="text" name="query" palceholder="Search for anything" />
-      </form>
-      <a class="nav__link nav__link--business" href="#" />
-      <a class="nav__link nav__link--teach" href="#" />
-      <a class="nav__link nav__link--cart" href="#" />
-      <button class="btn btn--secondary">Login</button>
-      <button class="btn btn--primary">Signup</button>
-      <button class="btn btn--secondary">
-        <img class="icon" src="assets/icons/cart.svg" />
-      </button>
-      <button class="btn btn--secondary">
-        <img class="icon" src="assets/icons/glob.svg" />
-      </button>
-      <button class="btn btn--secondary">
+      <button class="nav__btn sm-only">
         <img class="icon" src="assets/icons/menu.svg" />
       </button>
-      <button class="btn btn--secondary">
+      <!-- to make the logo perfectly centered -->
+      <div class="nav__btn--placeholder sm-only"></div>
+
+      <div class="nav__logo_container sm">
+        <a class="nav__logo_link" href="#">
+          <img class="nav__logo" src="./assets/logo-udemy.svg" />
+        </a>
+      </div>
+
+      <button class="nav__link nav__link--categories">Categories</button>
+
+      <form class="nav__search">
+        <button disabled>
+          <img class="icon" src="assets/icons/search.svg" />
+        </button>
+        <input type="text" autocomplete="off" name="query" placeholder="Search for anything" />
+      </form>
+
+      <ul class="nav__links">
+        <li>
+          <a class="nav__link nav__link--business" href="#">Udemy Business</a>
+        </li>
+        <li>
+          <a class="nav__link nav__link--teach" href="#">Teach on Udemy</a>
+        </li>
+        <li>
+          <a class="nav__link nav__link--cart" href="#">
+            <img class="icon" src="assets/icons/cart.svg" />
+          </a>
+        </li>
+      </ul>
+
+      <a class="btn btn--secondary" href="#">Log in</a>
+      <a class="btn btn--primary" href="#">Sign up</a>
+      <a class="btn btn--secondary btn--icon" href="#">
+        <img class="icon" src="assets/icons/glob.svg" />
+      </a>
+
+      <button class="nav__btn sm-only">
         <img class="icon" src="assets/icons/search.svg" />
       </button>
+      <a class="nav__btn nav__link--cart sm-only" href="#">
+        <img class="icon" src="assets/icons/cart.svg" />
+      </a>
     </nav>
     <header>
       <div class="header__bg"></div>
