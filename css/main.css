@@ -28,6 +28,66 @@
   margin-top: 0;
 }
 
+.tabs__tab__header {
+  margin-bottom: 3.2rem;
+}
+
+.courses-carousel {
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (5 - 1) * 1.6rem) / 5);
+}
+
+.course {
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  grid-gap: 0.4rem;
+}
+
+.course__title {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.course__rating {
+  display: flex;
+  align-items: center;
+}
+
+.course__rating__ratio {
+  color: #b4690e;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.course__rating__stars {
+  height: 1.7rem;
+}
+
+.course__price {
+  padding: 0.4rem 0;
+  font-weight: bold;
+}
+
+.course__badges {
+  display: flex;
+  margin: 0.4rem 0;
+  gap: 0.4rem 0.8rem;
+}
+
+.course__badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  white-space: nowrap;
+  background-color: #eceb98;
+  color: #3d3c0a;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 600px) {
   .section1-header {
     display: none;
