@@ -51,6 +51,7 @@ nav .nav__link {
   background-color: transparent;
   text-decoration: none;
   font-size: 1.4rem;
+  color: inherit;
 
   height: 4.8rem;
   display: inline-flex;
@@ -73,6 +74,7 @@ nav .nav__link:hover {
   * this filter is equivalent to `background-color: #401b9c`
   * we need to do this to apply also to the <img> tags that source svg icons
   * tool used: https://codepen.io/sosuke/pen/Pjoqqp?editors=0110
+  * stackoverflow: https://stackoverflow.com/a/53336754/10891757
   * */
   filter: brightness(0) saturate(100%) invert(15%) sepia(65%) saturate(4496%) hue-rotate(255deg)
     brightness(74%) contrast(103%);

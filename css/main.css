@@ -1,0 +1,35 @@
+.tabs__buttons {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.6rem;
+}
+
+.tabs__buttons button {
+  border: none;
+  background-color: transparent;
+  color: #6a6f73;
+  cursor: pointer;
+  padding: 0.8rem 0.4rem;
+  font-weight: bold;
+  height: 4.8rem;
+}
+
+.tabs__buttons button:hover,
+.tabs__buttons button.active {
+  color: #1c1d1f;
+}
+
+.tabs__tab {
+  border: 1px solid #d1d7dc;
+  padding: 3.2rem;
+}
+
+.tabs__tab > h2 {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .section1-header {
+    display: none;
+  }
+}
