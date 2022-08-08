@@ -40,5 +40,6 @@ header .header__card h1 {
     position: static;
     box-shadow: none;
     width: initial;
+    padding-bottom: 0;
   }
 }

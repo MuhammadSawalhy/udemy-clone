@@ -1,7 +1,18 @@
+.section1-header p {
+  margin: 0;
+  margin-top: 0.8rem;
+  font-size: 1.9rem;
+}
+
+.section1-header h1 {
+  margin-bottom: 0;
+}
+
 .tabs__buttons {
   display: flex;
   overflow-x: auto;
   gap: 1.6rem;
+  white-space: nowrap;
 }
 
 .tabs__buttons button {
@@ -98,5 +109,13 @@
 @media screen and (max-width: 600px) {
   .section1-header {
     display: none;
+  }
+
+  .tabs__tab {
+    padding: 2rem;
+  }
+
+  .courses-carousel {
+    padding: 0;
   }
 }
