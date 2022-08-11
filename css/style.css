@@ -14,6 +14,10 @@ body {
   color: #1c1d1f;
 }
 
+main {
+  padding: 2.4rem;
+}
+
 main,
 header {
   max-width: 134rem;
@@ -34,10 +38,6 @@ a,
 body,
 button {
   font-size: 1.6rem;
-}
-
-section {
-  margin: 2.4rem;
 }
 
 .heading--serif {
