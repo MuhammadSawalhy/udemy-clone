@@ -8,14 +8,14 @@
   margin-bottom: 0;
 }
 
-.tabs__buttons {
+.tabs-buttons {
   display: flex;
   overflow-x: auto;
   gap: 1.6rem;
   white-space: nowrap;
 }
 
-.tabs__buttons button {
+.tabs-buttons button {
   border: none;
   background-color: transparent;
   color: #6a6f73;
@@ -25,21 +25,21 @@
   height: 4.8rem;
 }
 
-.tabs__buttons button:hover,
-.tabs__buttons button.active {
+.tabs-buttons button:hover,
+.tabs-buttons button.active {
   color: #1c1d1f;
 }
 
-.tabs__tab {
+.tabs-tab {
   border: 1px solid #d1d7dc;
   padding: 3.2rem;
 }
 
-.tabs__tab__header {
+.tabs-tab-header {
   margin-bottom: 3.2rem;
 }
 
-.tabs__tab__header > h2 {
+.tabs-tab-header > h2 {
   margin-top: 0;
 }
 
@@ -59,44 +59,44 @@
   flex-grow: 1;
 }
 
-.course__img {
+.course-img {
   width: 100%;
   object-fit: cover;
 }
 
-.course__title {
+.course-title {
   margin-top: 0.8rem;
   font-size: 1.6rem;
   font-weight: bold;
 }
 
-.course__rating {
+.course-rating {
   display: flex;
   align-items: center;
 }
 
-.course__rating__ratio {
+.course-rating-ratio {
   color: #b4690e;
   font-size: 1.4rem;
   font-weight: bold;
 }
 
-.course__rating__stars {
+.course-rating-stars {
   height: 1.7rem;
 }
 
-.course__price {
+.course-price {
   padding: 0.4rem 0;
   font-weight: bold;
 }
 
-.course__badges {
+.course-badges {
   display: flex;
   margin: 0.4rem 0;
   gap: 0.4rem 0.8rem;
 }
 
-.course__badge {
+.course-badge {
   display: inline-block;
   padding: 0.4rem 0.8rem;
   white-space: nowrap;
@@ -111,7 +111,7 @@
     display: none;
   }
 
-  .tabs__tab {
+  .tabs-tab {
     padding: 2rem;
   }
 

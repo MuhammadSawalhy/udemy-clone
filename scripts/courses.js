@@ -39,7 +39,7 @@ const tabsContent = {
 };
 
 export function setupTabs() {
-  const tabButtons = document.querySelectorAll(".tabs__buttons button");
+  const tabButtons = document.querySelectorAll(".tabs-buttons button");
   for (const btn of tabButtons) {
     btn.addEventListener("click", () => {
       for (const otherBtn of tabButtons) otherBtn.classList.remove("active");
@@ -51,9 +51,9 @@ export function setupTabs() {
 }
 
 function updateTab() {
-  const header = document.querySelector(".tabs__tab__header h2");
-  const description = document.querySelector(".tabs__tab__header p");
-  const exploreBtn = document.querySelector(".tabs__tab__header button");
+  const header = document.querySelector(".tabs-tab-header h2");
+  const description = document.querySelector(".tabs-tab-header p");
+  const exploreBtn = document.querySelector(".tabs-tab-header button");
   const tab = getActiveTab();
   header.innerText = tabsContent[tab.category].header;
   description.innerText = tabsContent[tab.category].description;
@@ -71,7 +71,7 @@ export async function updateCourses() {
 }
 
 function getActiveTab() {
-  const tabButtons = document.querySelectorAll(".tabs__buttons button");
+  const tabButtons = document.querySelectorAll(".tabs-buttons button");
   for (const tabBtn of tabButtons) {
     if (tabBtn.classList.contains("active")) {
       return { title: tabBtn.innerText, category: tabBtn.dataset.category };
@@ -80,33 +80,33 @@ function getActiveTab() {
 }
 
 function getSearchQuery() {
-  const searchInput = document.querySelector("nav .nav__search input");
+  const searchInput = document.querySelector("nav .nav-search input");
   return searchInput.value;
 }
 
 function courseToMarkup(course) {
   const starsImage = new URL("../assets/stars.jpg", import.meta.url);
   let badges = "";
-  let price = `<span class="course__price">E£${course.price}</span>`;
+  let price = `<span class="course-price">E£${course.price}</span>`;
   if (course.badges)
-    badges = course.badges.map((b) => `<span class="course__badge">${b}</span>`).join("\n");
+    badges = course.badges.map((b) => `<span class="course-badge">${b}</span>`).join("\n");
   if (course.discountPrice)
     price = `
-      <span class="course__price">E£${course.discountPrice}</span>
-      <span class="course__price--old">E£${course.price}</span>
+      <span class="course-price">E£${course.discountPrice}</span>
+      <span class="course-price-old">E£${course.price}</span>
     `;
   return `
     <a class="course" href="#">
-      <img class="course__img" src="${course.image}" alt="course cover" />
-      <span class="course__title">${course.title}</span>
+      <img class="course-img" src="${course.image}" alt="course cover" />
+      <span class="course-title">${course.title}</span>
       <span class="text-small-lite">${course.instructors.map((i) => i.name).join()}</span>
-      <span class="course__rating">
-        <span class="course__rating__ratio">${course.rating.toFixed(1)}</span>
-        <img class="course__rating__stars" alt="stars" src="${starsImage}" />
+      <span class="course-rating">
+        <span class="course-rating-ratio">${course.rating.toFixed(1)}</span>
+        <img class="course-rating-stars" alt="stars" src="${starsImage}" />
         <span class="text-small-lite">(2,916)</span>
       </span>
       ${price}
-      <span class="course__badges">${badges}</span>
+      <span class="course-badges">${badges}</span>
     </a>
   `;
 }
