@@ -1094,7 +1094,9 @@
         }
       ],
       "price": 16.99,
-      "category": "python"
+      "discountPrice": 10.99,
+      "category": "python",
+      "badges": ["Bestseller"]
     },
     {
       "id": 396876,

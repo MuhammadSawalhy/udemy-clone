@@ -53,6 +53,7 @@
   text-decoration: none;
   color: inherit;
   display: grid;
+  align-content: flex-start;
   grid-gap: 0.4rem;
   max-width: 28rem;
   min-width: 22rem;
@@ -73,6 +74,7 @@
 .course-rating {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .course-rating-ratio {
@@ -88,6 +90,13 @@
 .course-price {
   padding: 0.4rem 0;
   font-weight: bold;
+}
+
+.course-price-old {
+  padding: 0.4rem 0;
+  text-decoration: line-through;
+  color: #6a6f73;
+  margin-left: 0.5rem;
 }
 
 .course-badges {

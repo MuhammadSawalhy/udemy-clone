@@ -26,7 +26,7 @@ const tabsContent = {
     description:
       "Take a Microsoft Excel course from Udemy, and learn how to use this industry-standard software. Real-world experts will show you the basics like how to organize data into sheets, rows and columns, and advanced techniques like creating complex dynamic formulas. Both small businesses and large companies use Excel to turn their raw data into actionable insights.",
   },
-  draw: {
+  drawing: {
     header: "Expand your creative skillset with Drawing",
     description:
       "Want to start drawing for fun or take your craft to the next level? Explore our online drawing classes and learn pencil drawing, figure drawing, cartoon drawing, character drawing for cartoons and anime, illustration, sketching, shading and more. Take an overview course on the fundamentals of drawing or zero in on an area you’d like to improve with a specialized course. We’ve got tons of options to get — and keep — you going.",
@@ -57,7 +57,7 @@ function updateTab() {
   const tab = getActiveTab();
   header.innerText = tabsContent[tab.category].header;
   description.innerText = tabsContent[tab.category].description;
-  exploreBtn.innerText = `Explore ${tabsContent[tab.title]}`;
+  exploreBtn.innerText = `Explore ${tab.title}`;
 }
 
 export async function updateCourses() {
@@ -92,8 +92,10 @@ function courseToMarkup(course) {
     badges = course.badges.map((b) => `<span class="course-badge">${b}</span>`).join("\n");
   if (course.discountPrice)
     price = `
-      <span class="course-price">E£${course.discountPrice}</span>
-      <span class="course-price-old">E£${course.price}</span>
+      <span>
+        <span class="course-price">E£${course.discountPrice}</span>
+        <span class="course-price-old">E£${course.price}</span>
+      </span>
     `;
   return `
     <a class="course" href="#">
