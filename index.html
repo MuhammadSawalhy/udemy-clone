@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <script defer src="./script.js"></script>
+    <script defer src="scripts/index.js" type="module"></script>
   </head>
   <body>
+    <!-- dummy script tag to fix bug of firefox: https://stackoverflow.com/a/57888310/10891757 -->
+    <script>
+      void 0;
+    </script>
     <nav>
       <button class="nav__btn sm-only">
         <img class="icon" src="assets/icons/menu.svg" />
@@ -27,7 +31,7 @@
       <button class="nav__link nav__link--categories">Categories</button>
 
       <form class="nav__search">
-        <button disabled>
+        <button>
           <img class="icon" src="assets/icons/search.svg" />
         </button>
         <input type="text" autocomplete="off" name="query" placeholder="Search for anything" />
@@ -75,13 +79,13 @@
 
       <div class="tabs">
         <div class="tabs__buttons">
-          <button class="active">Python</button>
-          <button>Excel</button>
-          <button>Web Development</button>
-          <button>JavaScript</button>
-          <button>Data Science</button>
-          <button>AWS Certification</button>
-          <button>Drawing</button>
+          <button class="active" data-category="python">Python</button>
+          <button data-category="excel">Excel</button>
+          <button data-category="web">Web Development</button>
+          <button data-category="javascript">JavaScript</button>
+          <button data-category="data-science">Data Science</button>
+          <button data-category="aws">AWS Certification</button>
+          <button data-category="drawing">Drawing</button>
         </div>
 
         <div class="tabs__tab">

@@ -1,0 +1,27 @@
+{
+  "name": "project-1",
+  "version": "1.0.0",
+  "description": "Live demo: https://muhammadsawalhy.github.io/udemy-clone/",
+  "main": "script.js",
+  "scripts": {
+    "start": "npm-run-all --parallel server json",
+    "server": "parcel serve index.html",
+    "json": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuhammadSawalhy/udemy-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuhammadSawalhy/udemy-clone/issues"
+  },
+  "homepage": "https://github.com/MuhammadSawalhy/udemy-clone#readme",
+  "devDependencies": {
+    "json-server": "^0.17.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.7.0"
+  }
+}
