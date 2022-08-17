@@ -15,7 +15,7 @@ body {
 }
 
 main {
-  padding: 2.4rem;
+  padding: 0 2.4rem;
 }
 
 main,
@@ -26,12 +26,24 @@ header {
   margin-left: auto;
 }
 
+section {
+  margin: 6.4rem 0;
+}
+
+section:nth-of-type(2) h2 {
+  margin-bottom: 2.4rem;
+}
+
 h1 {
   font-size: 3.2rem;
 }
 
 h2 {
   font-size: 2.4rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold !important;
 }
 
 a,
@@ -50,7 +62,7 @@ button {
   object-fit: fill;
 }
 
-.btn {
+.button {
   height: 4rem;
   min-width: 8rem;
   padding: 0 1.2rem;
@@ -70,33 +82,33 @@ button {
   font-weight: bold;
 }
 
-.btn.btn-secondary {
+.button.button-secondary {
   border: 1px solid #1c1d1f;
   color: #1c1d1f;
 }
 
-.btn.btn-primary {
+.button.button-primary {
   background: #1c1d1f;
   color: white;
 }
 
-.btn.btn-icon {
+.button.button-icon {
   min-width: auto;
   width: 4rem;
   padding: 0 1rem;
 }
 
-.btn.btn-icon > .icon {
+.button.button-icon > .icon {
   width: 2rem;
   height: 2rem;
 }
 
-.btn.btn-icon:hover,
-.btn.btn-secondary:hover {
+.button.button-icon:hover,
+.button.button-secondary:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-.btn.btn-primary:hover {
+.button.button-primary:hover {
   background-color: #000;
 }
 

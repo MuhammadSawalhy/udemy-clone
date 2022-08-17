@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Udemy clone - bld.ai intern project 1</title>
+    <!-- Bootstrap only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/courses.css" />
     <script defer src="scripts/index.js" type="module"></script>
   </head>
   <body>
@@ -21,22 +28,18 @@
       </button>
       <!-- to make the logo perfectly centered -->
       <div class="nav-btn-placeholder sm-only"></div>
-
       <div class="nav-logo_container sm">
         <a class="nav-logo_link" href="#">
           <img class="nav-logo" src="./assets/logo-udemy.svg" />
         </a>
       </div>
-
       <button class="nav-link nav-link-categories">Categories</button>
-
       <form class="nav-search">
         <button>
           <img class="icon" src="assets/icons/search.svg" />
         </button>
         <input type="text" autocomplete="off" name="query" placeholder="Search for anything" />
       </form>
-
       <ul class="nav-links">
         <li>
           <a class="nav-link nav-link-business" href="#">Udemy Business</a>
@@ -50,13 +53,11 @@
           </a>
         </li>
       </ul>
-
-      <a class="btn btn-secondary" href="#">Log in</a>
-      <a class="btn btn-primary" href="#">Sign up</a>
-      <a class="btn btn-secondary btn-icon" href="#">
+      <a class="button button-secondary" href="#">Log in</a>
+      <a class="button button-primary" href="#">Sign up</a>
+      <a class="button button-secondary button-icon" href="#">
         <img class="icon" src="assets/icons/glob.svg" />
       </a>
-
       <button class="nav-btn sm-only">
         <img class="icon" src="assets/icons/search.svg" />
       </button>
@@ -72,114 +73,183 @@
       </div>
     </header>
     <main>
-      <div class="section1-header">
-        <h1 class="heading-serif">A broad selection of courses</h1>
-        <p>Choose from 185,000 online video courses with new additions published every month</p>
-      </div>
-
-      <div class="tabs">
-        <div class="tabs-buttons">
-          <button class="active" data-category="python">Python</button>
-          <button data-category="excel">Excel</button>
-          <button data-category="web">Web Development</button>
-          <button data-category="javascript">JavaScript</button>
-          <button data-category="data-science">Data Science</button>
-          <button data-category="aws">AWS Certification</button>
-          <button data-category="drawing">Drawing</button>
+      <section>
+        <div class="section1-header">
+          <h1 class="heading-serif">A broad selection of courses</h1>
+          <p>Choose from 185,000 online video courses with new additions published every month</p>
         </div>
-
-        <div class="tabs-tab">
-          <div class="tabs-tab-header">
-            <h2>Expand your career opportunities with Python</h2>
-            <p>
-              Take one of Udemy’s range of Python courses and learn how to code using this
-              incredibly useful language. Its simple syntax and readability makes Python perfect for
-              Flask, Django, data science, and machine learning. You’ll learn how to build
-              everything from games to sites to apps. Choose from a range of courses that will
-              appeal to ...
-            </p>
-
-            <button class="btn btn-secondary">Explore Python</button>
+        <div class="tabs">
+          <div class="tabs-buttons">
+            <button class="active" data-category="python">Python</button>
+            <button data-category="excel">Excel</button>
+            <button data-category="web">Web Development</button>
+            <button data-category="javascript">JavaScript</button>
+            <button data-category="data-science">Data Science</button>
+            <button data-category="aws">AWS Certification</button>
+            <button data-category="drawing">Drawing</button>
           </div>
-
-          <div class="courses-carousel">
-            <a class="course" href="#">
-              <img class="course-img" src="assets/courses/course-1.jpg" alt="course cover" />
-              <span class="course-title">
-                Learn Python: The Complete Python Programming Course
-              </span>
-              <span class="text-small-lite">Avinash Jain, The Codex</span>
-              <span class="course-rating">
-                <span class="course-rating-ratio">4.4</span>
-                <img class="course-rating-stars" alt="stars" src="assets/stars.jpg" />
-                <span class="text-small-lite">(2,916)</span>
-              </span>
-              <span class="course-price">E£679.99</span>
-              <span class="course-badges"><span class="course-badge">Bestseller</span></span>
-            </a>
-
-            <a class="course" href="#">
-              <img class="course-img" src="assets/courses/course-2.jpg" alt="course cover" />
-              <span class="course-title">
-                Learn Python: The Complete Python Programming Course
-              </span>
-              <span class="text-small-lite">Avinash Jain, The Codex</span>
-              <span class="course-rating">
-                <span class="course-rating-ratio">4.4</span>
-                <img class="course-rating-stars" alt="stars" src="assets/stars.jpg" />
-                <span class="text-small-lite">(2,916)</span>
-              </span>
-              <span class="course-price">E£679.99</span>
-              <span class="course-badges"><span class="course-badge">Bestseller</span></span>
-            </a>
-
-            <a class="course" href="#">
-              <img class="course-img" src="assets/courses/course-3.jpg" alt="course cover" />
-              <span class="course-title">
-                Learn Python: The Complete Python Programming Course
-              </span>
-              <span class="text-small-lite">Avinash Jain, The Codex</span>
-              <span class="course-rating">
-                <span class="course-rating-ratio">4.4</span>
-                <img class="course-rating-stars" alt="stars" src="assets/stars.jpg" />
-                <span class="text-small-lite">(2,916)</span>
-              </span>
-              <span class="course-price">E£679.99</span>
-              <span class="course-badges"><span class="course-badge">Bestseller</span></span>
-            </a>
-
-            <a class="course" href="#">
-              <img class="course-img" src="assets/courses/course-4.jpg" alt="course cover" />
-              <span class="course-title">
-                Learn Python: The Complete Python Programming Course
-              </span>
-              <span class="text-small-lite">Avinash Jain, The Codex</span>
-              <span class="course-rating">
-                <span class="course-rating-ratio">4.4</span>
-                <img class="course-rating-stars" alt="stars" src="assets/stars.jpg" />
-                <span class="text-small-lite">(2,916)</span>
-              </span>
-              <span class="course-price">E£679.99</span>
-              <span class="course-badges"><span class="course-badge">Bestseller</span></span>
-            </a>
-
-            <a class="course" href="#">
-              <img class="course-img" src="assets/courses/course-5.jpg" alt="course cover" />
-              <span class="course-title">
-                Learn Python: The Complete Python Programming Course
-              </span>
-              <span class="text-small-lite">Avinash Jain, The Codex</span>
-              <span class="course-rating">
-                <span class="course-rating-ratio">4.4</span>
-                <img class="course-rating-stars" alt="stars" src="assets/stars.jpg" />
-                <span class="text-small-lite">(2,916)</span>
-              </span>
-              <span class="course-price">E£679.99</span>
-              <span class="course-badges"><span class="course-badge">Bestseller</span></span>
-            </a>
+          <div class="tabs-tab">
+            <div class="tabs-tab-header">
+              <h2>Expand your career opportunities with Python</h2>
+              <p>
+                Take one of Udemy’s range of Python courses and learn how to code using this
+                incredibly useful language. Its simple syntax and readability makes Python perfect
+                for Flask, Django, data science, and machine learning. You’ll learn how to build
+                everything from games to sites to apps. Choose from a range of courses that will
+                appeal to ...
+              </p>
+              <button class="button button-secondary">Explore Python</button>
+            </div>
+            <div class="courses-carousel">
+              <a class="course" href="#">
+                <img class="course-img" src="assets/courses/course-1.jpg" alt="course cover" />
+                <span class="course-title">
+                  Learn Python: The Complete Python Programming Course
+                </span>
+                <span class="text-small-lite">Avinash Jain, The Codex</span>
+                <span class="course-rating">
+                  <span class="course-rating-ratio">4.4</span>
+                  <img class="course-rating-stars" alt="stars" src="assets/stars.jpg" />
+                  <span class="text-small-lite">(2,916)</span>
+                </span>
+                <span class="course-price">E£679.99</span>
+                <span class="course-badges"><span class="course-badge">Bestseller</span></span>
+              </a>
+              <a class="course" href="#">
+                <img class="course-img" src="assets/courses/course-2.jpg" alt="course cover" />
+                <span class="course-title">
+                  Learn Python: The Complete Python Programming Course
+                </span>
+                <span class="text-small-lite">Avinash Jain, The Codex</span>
+                <span class="course-rating">
+                  <span class="course-rating-ratio">4.4</span>
+                  <img class="course-rating-stars" alt="stars" src="assets/stars.jpg" />
+                  <span class="text-small-lite">(2,916)</span>
+                </span>
+                <span class="course-price">E£679.99</span>
+                <span class="course-badges"><span class="course-badge">Bestseller</span></span>
+              </a>
+              <a class="course" href="#">
+                <img class="course-img" src="assets/courses/course-3.jpg" alt="course cover" />
+                <span class="course-title">
+                  Learn Python: The Complete Python Programming Course
+                </span>
+                <span class="text-small-lite">Avinash Jain, The Codex</span>
+                <span class="course-rating">
+                  <span class="course-rating-ratio">4.4</span>
+                  <img class="course-rating-stars" alt="stars" src="assets/stars.jpg" />
+                  <span class="text-small-lite">(2,916)</span>
+                </span>
+                <span class="course-price">E£679.99</span>
+                <span class="course-badges"><span class="course-badge">Bestseller</span></span>
+              </a>
+              <a class="course" href="#">
+                <img class="course-img" src="assets/courses/course-4.jpg" alt="course cover" />
+                <span class="course-title">
+                  Learn Python: The Complete Python Programming Course
+                </span>
+                <span class="text-small-lite">Avinash Jain, The Codex</span>
+                <span class="course-rating">
+                  <span class="course-rating-ratio">4.4</span>
+                  <img class="course-rating-stars" alt="stars" src="assets/stars.jpg" />
+                  <span class="text-small-lite">(2,916)</span>
+                </span>
+                <span class="course-price">E£679.99</span>
+                <span class="course-badges"><span class="course-badge">Bestseller</span></span>
+              </a>
+              <a class="course" href="#">
+                <img class="course-img" src="assets/courses/course-5.jpg" alt="course cover" />
+                <span class="course-title">
+                  Learn Python: The Complete Python Programming Course
+                </span>
+                <span class="text-small-lite">Avinash Jain, The Codex</span>
+                <span class="course-rating">
+                  <span class="course-rating-ratio">4.4</span>
+                  <img class="course-rating-stars" alt="stars" src="assets/stars.jpg" />
+                  <span class="text-small-lite">(2,916)</span>
+                </span>
+                <span class="course-price">E£679.99</span>
+                <span class="course-badges"><span class="course-badge">Bestseller</span></span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section>
+        <h2>Top categories</h2>
+        <div class="top-categories row g-4">
+          <a class="col-12 col-md-4 col-lg-3 text-decoration-none" href="#">
+            <img
+              class="d-block w-100"
+              src="assets/top-categories/lohp-category-design-v2.jpg"
+              alt="top categories - design category"
+            />
+            <span class="d-block fw-bold pt-2 pb-4 text-black">Design</span>
+          </a>
+          <a class="col-12 col-md-4 col-lg-3 text-decoration-none" href="#">
+            <img
+              class="d-block w-100"
+              src="assets/top-categories/lohp-category-development-v2.jpg"
+              alt="top categories - development category"
+            />
+            <span class="d-block fw-bold pt-2 pb-4 text-black">Development</span>
+          </a>
+          <a class="col-12 col-md-4 col-lg-3 text-decoration-none" href="#">
+            <img
+              class="d-block w-100"
+              src="assets/top-categories/lohp-category-marketing-v2.jpg"
+              alt="top categories - marketing category"
+            />
+            <span class="d-block fw-bold pt-2 pb-4 text-black">Marketing</span>
+          </a>
+          <a class="col-12 col-md-4 col-lg-3 text-decoration-none" href="#">
+            <img
+              class="d-block w-100"
+              src="assets/top-categories/lohp-category-it-and-software-v2.jpg"
+              alt="top categories - IT and software category"
+            />
+            <span class="d-block fw-bold pt-2 pb-4 text-black">IT and Software</span>
+          </a>
+          <a class="col-12 col-md-4 col-lg-3 text-decoration-none" href="#">
+            <img
+              class="d-block w-100"
+              src="assets/top-categories/lohp-category-personal-development-v2.jpg"
+              alt="top categories - personal development category"
+            />
+            <span class="d-block fw-bold pt-2 pb-4 text-black">Personal Development</span>
+          </a>
+          <a class="col-12 col-md-4 col-lg-3 text-decoration-none" href="#">
+            <img
+              class="d-block w-100"
+              src="assets/top-categories/lohp-category-business-v2.jpg"
+              alt="top categories - business category"
+            />
+            <span class="d-block fw-bold pt-2 pb-4 text-black">Business</span>
+          </a>
+          <a class="col-12 col-md-4 col-lg-3 text-decoration-none" href="#">
+            <img
+              class="d-block w-100"
+              src="assets/top-categories/lohp-category-photography-v2.jpg"
+              alt="top categories - photograph category"
+            />
+            <span class="d-block fw-bold pt-2 pb-4 text-black">Photography</span>
+          </a>
+          <a class="col-12 col-md-4 col-lg-3 text-decoration-none" href="#">
+            <img
+              class="d-block w-100"
+              src="assets/top-categories/lohp-category-music-v2.jpg"
+              alt="top categories - music category"
+            />
+            <span class="d-block fw-bold pt-2 pb-4 text-black">Music</span>
+          </a>
+        </div>
+      </section>
     </main>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

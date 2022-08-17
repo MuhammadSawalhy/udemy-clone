@@ -51,13 +51,19 @@
 
 .course {
   text-decoration: none;
-  color: inherit;
+  /* bootstrap changes the color of <a> when it is hovered */
+  color: black !important;
   display: grid;
   align-content: flex-start;
   grid-gap: 0.4rem;
   max-width: 28rem;
   min-width: 22rem;
   flex-grow: 1;
+}
+
+.course:hover .course-img {
+  transition: filter linear 100ms;
+  filter: brightness(80%);
 }
 
 .course-img {
