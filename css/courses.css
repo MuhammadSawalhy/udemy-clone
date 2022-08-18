@@ -43,10 +43,42 @@
   margin-top: 0;
 }
 
+/* TODO: remove this */
 .courses-carousel {
   display: flex;
   flex-wrap: wrap;
   gap: 1.6rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  border: 1px solid #6a6f73;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #1c1d1f;
+  border-radius: 100%;
+  position: absolute;
+  width: 4.8rem;
+  height: 4.8rem;
+  opacity: 1;
+  top: 25%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1 !important;
+  background-color: #393b3f;
+}
+
+.carousel-control-prev .carousel-control-prev-icon,
+.carousel-control-next .carousel-control-next-icon {
+  filter: none !important;
+}
+.carousel-control-prev {
+  left: -1.6rem;
+}
+
+.carousel-control-next {
+  right: -1.6rem;
 }
 
 .course {
