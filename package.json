@@ -4,7 +4,7 @@
   "description": "Live demo: https://muhammadsawalhy.github.io/udemy-clone/",
   "main": "script.js",
   "scripts": {
-    "start": "npm-run-all --parallel server json",
+    "start": "npm-run-all -prln server json",
     "server": "parcel serve index.html",
     "json": "json-server --watch db.json"
   },
