@@ -69,10 +69,6 @@
   background-color: #393b3f;
 }
 
-.carousel-control-prev .carousel-control-prev-icon,
-.carousel-control-next .carousel-control-next-icon {
-  filter: none !important;
-}
 .carousel-control-prev {
   left: -1.6rem;
 }
@@ -88,8 +84,8 @@
   display: grid;
   align-content: flex-start;
   grid-gap: 0.4rem;
-  max-width: 28rem;
-  min-width: 22rem;
+  max-width: 30rem;
+  min-width: 18rem;
   flex-grow: 1;
 }
 
