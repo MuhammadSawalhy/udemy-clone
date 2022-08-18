@@ -67,6 +67,7 @@ export async function updateCourses() {
   const params = new URLSearchParams({ q: query, category: tab.category });
   const url = new URL(`/courses/?${params}`, JSON_SERVER_URL);
   const courses = await (await fetch(url)).json();
+  carouselState.slide = 0;
   carouselState.courses = courses;
   setCardsCount(carouselState.cardsCount);
   renderCarousel();
@@ -85,7 +86,7 @@ function renderCarousel() {
   for (let slide = 0; slide < slidesCount; slide++) {
     markup += `
       <div class="carousel-item ${slide == activeSlide ? "active" : ""}">
-        <div class="d-flex gap-3 px-2 justify-content-around">
+        <div class="d-flex gap-3 px-2 justify-content-evenly">
     `;
 
     const indexLimit = Math.min(slide * cardsCount + cardsCount, courses.length);
