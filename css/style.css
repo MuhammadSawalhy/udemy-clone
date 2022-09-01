@@ -116,3 +116,22 @@ button {
   font-size: 1.2rem;
   color: #6a6f73;
 }
+
+.top-categories {
+  /* to cancel the `me-4` effect of the last col items */
+  margin-inline-end: -1.5rem;
+}
+
+.top-categories .image {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.top-categories img {
+  transition: transform 150ms cubic-bezier(0,0,.38,.9);
+}
+
+.top-categories img:hover {
+  transform: scale(1.05);
+}
